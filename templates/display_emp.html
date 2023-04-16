@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1
+        {
+            background-color: goldenrod;
+        }
+        th:hover
+        {
+            background-color: blue;
+        }
+        th
+        {
+            background-color:lawngreen;
+        }
+        td:hover 
+        {
+            background-color: rebeccapurple;
+        }
+        body
+        {
+            background-color:lightyellow;
+        }
+        
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Emp Table</h1>
+        <table  border="3px">
+            <tr>
+                <th>EMPNO</th>
+                <th>ENAME</th>
+                <th>JOB</th>
+                <th>MGR</th>>
+                <th>HIREDATE</th>
+                <th>SAL</th>
+                <th>COMM</th>
+                <th>DEPTNO</th>
+
+            </tr>
+            {% for a in emp %} 
+            <tr>
+                <td>{{a.EMPNO}}</td>
+                <td>{{a.ENAME}}</td>
+                <td>{{a.JOB}}</td>
+                <td>{{a.MGR}}</td>
+                <td>{{a.HIREDATE}}</td>
+                <td>{{a.SAL}}</td>
+                <td>{{a.COMM}}</td>
+                <td>{{a.DEPTNO}}</td>
+                
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>
